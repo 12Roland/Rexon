@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Rexon - Premium Gadgets Store</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a192f; /* Deep blue background */
+            color: #e6f1ff; /* Light text for contrast */
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: #64ffda; /* Teal accent */
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        /* Cards Section */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+        .card {
+            background: #112240;
+            border-radius: 10px;
+            padding: 25px;
+            flex: 1 1 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h2 {
+            color: #64ffda;
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+        /* Featured Products Section */
+        .section-title {
+            text-align: center;
+            color: #64ffda;
+            font-size: 2rem;
+            margin: 60px 0 30px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+        .product {
+            background: #112240;
+            border-radius: 8px;
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        /* Testimonials Section */
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 60px 0;
+        }
+        .testimonial {
+            background: #112240;
+            border-radius: 10px;
+            padding: 25px;
+            flex: 1 1 300px;
+            position: relative;
+        }
+        .testimonial:before {
+            content: '"';
+            font-size: 4rem;
+            color: #64ffda;
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+        .testimonial p {
+            font-style: italic;
+            padding-left: 30px;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        .author-info h4 {
+            margin: 0;
+            color: #64ffda;
+        }
+        .author-info p {
+            margin: 5px 0 0;
+            opacity: 0.8;
+            font-style: normal;
+            font-size: 0.9rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #233554;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Original About Section -->
+        <div class="header">
+            <h1>About Rexon</h1>
+            <p>Your trusted destination for cutting-edge gadgets and tech innovations.</p>
+        </div>
+
+        <div class="content">
+            <div class="card">
+                <h2>Our Story</h2>
+                <p>Founded in 2023, Rexon started with a simple mission: to bring the latest and most reliable gadgets to tech enthusiasts at affordable prices. Today, we're a leading name in the industry, known for our curated selection and exceptional service.</p>
+            </div>
+
+            <div class="card">
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li>✔️ 100% Authentic Products</li>
+                    <li>✔️ Competitive Pricing</li>
+                    <li>✔️ Fast & Reliable Shipping</li>
+                    <li>✔️ Expert Customer Support</li>
+                    <li>✔️ 30-Day Easy Returns</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Our Promise</h2>
+                <p>At Rexon, we don't just sell gadgets—we deliver experiences. Every product is handpicked by our tech experts to ensure quality, performance, and value. Your satisfaction is our top priority.</p>
+            </div>
+        </div>
+
+        <!-- Featured Products Section with Unsplash Images -->
+        <h2 class="section-title">Our Bestsellers</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2lyZWxlc3MlMjBlYXJidWRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=200&q=60" alt="Wireless Earbuds">
+                <h3>NeoX Buds Pro</h3>
+                <p>Noise-cancelling • 30hrs battery</p>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c21hcnQlMjB3YXRjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=200&q=60" alt="Smart Watch">
+                <h3>Rexon Watch 5</h3>
+                <p>Health tracking • AMOLED display</p>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG93ZXIlMjBiYW5rfGVufDB8fDB8fHww&auto=format&fit=crop&w=200&q=60" alt="Power Bank">
+                <h3>VoltX 20,000mAh</h3>
+                <p>Fast charging • Dual USB-C</p>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ymx1ZXRvb3RoJTIwc3BlYWtlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=200&q=60" alt="Bluetooth Speaker">
+                <h3>BassPulse X3</h3>
+                <p>360° sound • IPX7 waterproof</p>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>The NeoX Buds exceeded my expectations! The noise cancellation is studio-quality, and Rexon's delivery was lightning fast.</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=100&q=60" alt="Sarah K.">
+                    <div class="author-info">
+                        <h4>Sarah K.</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>I've bought 3 gadgets from Rexon this year. Their prices beat Amazon, and their support team actually responds within minutes!</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=100&q=60" alt="James L.">
+                    <div class="author-info">
+                        <h4>James L.</h4>
+                        <p>Tech Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>The Rexon Watch 5 tracks my workouts better than my old Apple Watch. For half the price? No brainer. Will shop here again!</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=100&q=60" alt="Priya M.">
+                    <div class="author-info">
+                        <h4>Priya M.</h4>
+                        <p>Fitness Blogger</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Rexon Gadgets. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
