@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Rexon:: Your Ultimate Tech Store</title>
+   <title>Rexon :: Your Ultimate Tech Store</title>
 
    <!-- External Stylesheets & Icons -->
    <link rel="stylesheet" href="styles.css">
@@ -14,31 +14,32 @@
 </head>
 
 <body>
-   <!-- Preloader Spinner -->
-   <div id="preloader">
+   <!-- ================= PRELOADER ================= -->
+   <div id="preloader" aria-label="Loading content">
       <div class="spinner"></div>
    </div>
 
-   <!-- Main Website Wrapper -->
+   <!-- ================= WEBSITE CONTENT ================= -->
    <div class="content">
-      <!-- Header & Navigation -->
+      <!-- ========== HEADER & NAVIGATION ========== -->
       <header class="header">
-         <nav class="nav container">
+         <nav class="nav container" role="navigation" aria-label="Main Navigation">
+            
             <!-- Website Logo -->
-            <a href="#" class="nav__logo">REXON</a>
+            <a href="index.html" class="nav__logo">REXON</a>
 
             <!-- Navigation Menu -->
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
-                  <li><a href="#" class="nav__link">Home</a></li>
+                  <li><a href="index.html" class="nav__link">Home</a></li>
                   <li><a href="about.html" class="nav__link">About Us</a></li>
                   <li><a href="product.html" class="nav__link">Products</a></li>
                </ul>
 
                <!-- Close button for mobile nav -->
-               <div class="nav__close" id="nav-close">
+               <button class="nav__close" id="nav-close" aria-label="Close menu">
                   <i class="ri-close-large-line"></i>
-               </div>
+               </button>
             </div>
 
             <!-- User Actions -->
@@ -50,7 +51,7 @@
                         <h3>Ritchie</h3>
                      </div>
                      <div class="dropdown__image">
-                        <img src="perfil.png" alt="Profile image">
+                        <img src="perfil.png" alt="User profile picture">
                      </div>
                   </div>
 
@@ -65,40 +66,45 @@
                </div>
 
                <!-- Menu Toggle (for mobile) -->
-               <div class="nav__toggle" id="nav-toggle">
+               <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
                   <i class="ri-menu-line"></i>
-               </div>
+               </button>
             </div>
          </nav>
       </header>
+
+      <!-- ========== HERO SECTION ========== -->
+      <main>
+         <section class="rexon-modern-hero" role="banner">
+            
+            <!-- Background Image -->
+            <img
+               src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&auto=format&fit=crop&w=2230&q=80"
+               alt="Modern tech gadgets" class="modern-hero-image">
+
+            <!-- Overlay for styling -->
+            <div class="tech-overlay" aria-hidden="true"></div>
+
+            <!-- Hero Content -->
+            <div class="modern-hero-content">
+               <h1 class="modern-hero-title">Elevate Your Tech Experience</h1>
+               <p class="modern-hero-subtitle">
+                  Discover the future with our collection of cutting-edge gadgets and smart devices
+               </p>
+               
+               <!-- CTA Button -->
+               <a href="product.html" class="button-link">
+                  <button class="modern-hero-button">
+                     <span>Explore Collection</span>
+                     <i class="material-icons" style="vertical-align: middle; margin-left:8px;">arrow_forward</i>
+                  </button>
+               </a>
+            </div>
+         </section>
+      </main>
    </div>
 
-   <!-- Hero Section -->
-   <section class="rexon-modern-hero">
-      <!-- Background Image -->
-      <img
-         src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&auto=format&fit=crop&w=2230&q=80"
-         alt="Modern tech gadgets" class="modern-hero-image">
-
-      <!-- Overlay for styling -->
-      <div class="tech-overlay"></div>
-
-      <!-- Hero Content -->
-      <div class="modern-hero-content">
-         <h1 class="modern-hero-title">Elevate Your Tech Experience</h1>
-         <p class="modern-hero-subtitle">Discover the future with our collection of cutting-edge gadgets and smart devices</p>
-         
-         <!-- CTA Button -->
-         <a href="product.html" class="button-link">
-            <button class="modern-hero-button">
-               <span>Explore Collection</span>
-               <i class="material-icons" style="vertical-align: middle; margin-left:8px;">arrow_forward</i>
-            </button>
-         </a>
-      </div>
-   </section>
-
-   <!-- JavaScript File -->
+   <!-- ================= JAVASCRIPT ================= -->
    <script src="script.js"></script>
 </body>
 
