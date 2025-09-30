@@ -1,246 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rexon - Premium Electronics</title>
-    <style>
-        :root {
-            --deep-blue: #08162b;
-            --electric-blue: #1a3a8f;
-            --teal-accent: #64ffda;
-            --card-blue: #112240;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, var(--deep-blue), var(--electric-blue));
-            color: #e6f1ff;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 30px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        h1 {
-            font-size: 2.8rem;
-            background: linear-gradient(to right, var(--teal-accent), #3a7bd5);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        /* Hero Carousel */
-        .hero {
-            height: 400px;
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            margin-bottom: 60px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-        .hero-slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1.2s ease-in-out;
-            background-size: cover;
-            background-position: center;
-        }
-        .hero-slide.active {
-            opacity: 1;
-        }
-        .slide1 { background-image: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FkZ2V0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1400&q=80'); }
-        .slide2 { background-image: url('https://images.unsplash.com/photo-1546054454-aa26e2b734c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWxlY3Ryb25pY3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1400&q=80'); }
-        .slide3 { background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVjaCUyMGRldmljZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1400&q=80'); }
-        /* Product Grid */
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin: 60px 0 40px;
-            color: var(--teal-accent);
-        }
-        .products-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-        }
-        .product-card {
-            background: var(--card-blue);
-            border-radius: 12px;
-            width: 280px;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-        .product-img {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-            border-bottom: 2px solid rgba(100, 255, 218, 0.2);
-        }
-        .product-info {
-            padding: 20px;
-        }
-        .product-title {
-            font-size: 1.3rem;
-            margin: 0 0 10px;
-        }
-        .product-price {
-            color: var(--teal-accent);
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        .product-desc {
-            opacity: 0.8;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-        .add-to-cart {
-            background: linear-gradient(to right, var(--teal-accent), #3a7bd5);
-            color: var(--deep-blue);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            transition: transform 0.3s;
-        }
-        .add-to-cart:hover {
-            transform: scale(1.03);
-        }
-        footer {
-            text-align: center;
-            margin-top: 80px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(100, 255, 218, 0.2);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rexon - Premium Electronics</title>
+  <style>
+    :root {
+      --deep-blue: #08162b;
+      --electric-blue: #1a3a8f;
+      --teal-accent: #64ffda;
+      --card-blue: #112240;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, var(--deep-blue), var(--electric-blue));
+      color: #e6f1ff;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      background: linear-gradient(to right, var(--teal-accent), #3a7bd5);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    /* Hero Carousel */
+    .hero {
+      height: 400px;
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 60px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    .hero-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-slide.active {
+      opacity: 1;
+    }
+    .slide1 { background-image: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=80'); }
+    .slide2 { background-image: url('https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&w=1400&q=80'); }
+    .slide3 { background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80'); }
+
+    /* Product Grid */
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin: 60px 0 40px;
+      color: var(--teal-accent);
+    }
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .product-card {
+      background: var(--card-blue);
+      border-radius: 12px;
+      width: 280px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    .product-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+    }
+    .product-info {
+      padding: 20px;
+    }
+    .product-title {
+      font-size: 1.3rem;
+      margin: 0 0 10px;
+    }
+    .product-price {
+      color: var(--teal-accent);
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .product-desc {
+      opacity: 0.8;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+    .add-to-cart {
+      background: linear-gradient(to right, var(--teal-accent), #3a7bd5);
+      color: var(--deep-blue);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: transform 0.3s;
+    }
+    .add-to-cart:hover {
+      transform: scale(1.03);
+    }
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(100, 255, 218, 0.2);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Rexon Electronics</h1>
-            <p class="subtitle">Cutting-edge gadgets for the modern lifestyle</p>
-        </header>
+  <div class="container">
+    <header>
+      <h1>Rexon Electronics</h1>
+      <p class="subtitle">Cutting-edge gadgets for the modern lifestyle</p>
+    </header>
 
-        <!-- Animated Hero Carousel -->
-        <div class="hero">
-            <div class="hero-slide slide1 active"></div>
-            <div class="hero-slide slide2"></div>
-            <div class="hero-slide slide3"></div>
-        </div>
-
-        <!-- Featured Products -->
-        <h2 class="section-title">Featured Gadgets</h2>
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21hcnRwaG9uZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Smartphone" class="product-img">
-                <div class="product-info">
-                    <h3 class="product-title">Quantum X Phone</h3>
-                    <p class="product-desc">6.7" AMOLED, 256GB, 48MP triple camera</p>
-                    <p class="product-price">$699</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=80" alt="Laptop" class="product-img">
-                <div class="product-info">
-                    <h3 class="product-title">NovaBook Pro</h3>
-                    <p class="product-desc">14" 4K display, 16GB RAM, 1TB SSD</p>
-                    <p class="product-price">$1299</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Headphones" class="product-img">
-                <div class="product-info">
-                    <h3 class="product-title">Pulse 900 Headphones</h3>
-                    <p class="product-desc">Active noise cancellation, 40hr battery</p>
-                    <p class="product-price">$249</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd553?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c21hcnQlMjB3YXRjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Smartwatch" class="product-img">
-                <div class="product-info">
-                    <h3 class="product-title">Chronos V Smartwatch</h3>
-                    <p class="product-desc">Heart rate monitor, GPS, 7-day battery</p>
-                    <p class="product-price">$179</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 5 -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGFibGV0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=80" alt="Tablet" class="product-img">
-                <div class="product-info">
-                    <h3 class="product-title">Galaxy Tab S3</h3>
-                    <p class="product-desc">10.5" OLED, 128GB, S-Pen included</p>
-                    <p class="product-price">$549</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FtaW5nJTIwcGN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=80" alt="Gaming PC" class="product-img">
-                <div class="product-info">
-                    <h3 class="product-title">Titan Gaming PC</h3>
-                    <p class="product-desc">RTX 4080, 32GB RAM, 2TB NVMe SSD</p>
-                    <p class="product-price">$2499</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <p>© 2025 Rexon Electronics. All rights reserved.</p>
-        </footer>
+    <!-- Animated Hero Carousel -->
+    <div class="hero">
+      <div class="hero-slide slide1 active"></div>
+      <div class="hero-slide slide2"></div>
+      <div class="hero-slide slide3"></div>
     </div>
 
-    <script>
-        // Hero Carousel Animation
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.hero-slide');
-        
-        function showSlide(n) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            currentSlide = (n + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
-        
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-        
-        // Auto-rotate every 5 seconds
-        setInterval(nextSlide, 5000);
-    </script>
+    <!-- Smartphones -->
+    <h2 class="section-title">Smartphones</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=500&q=80" alt="Smartphone" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Quantum X Phone</h3>
+          <p class="product-desc">6.7" AMOLED, 256GB, 48MP triple camera</p>
+          <p class="product-price">$699</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=500&q=80" alt="Smartphone" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Astra One</h3>
+          <p class="product-desc">6.9" OLED, 512GB, 64MP quad camera</p>
+          <p class="product-price">$899</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Laptops & Tablets -->
+    <h2 class="section-title">Laptops & Tablets</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=500&q=80" alt="Laptop" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">NovaBook Pro</h3>
+          <p class="product-desc">14" 4K display, 16GB RAM, 1TB SSD</p>
+          <p class="product-price">$1299</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=500&q=80" alt="Tablet" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Galaxy Tab S3</h3>
+          <p class="product-desc">10.5" OLED, 128GB, S-Pen included</p>
+          <p class="product-price">$549</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80" alt="Laptop" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">ZenBook Air</h3>
+          <p class="product-desc">13.3" Retina display, 8GB RAM, 512GB SSD</p>
+          <p class="product-price">$999</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio -->
+    <h2 class="section-title">Audio</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Headphones" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Pulse 900 Headphones</h3>
+          <p class="product-desc">Active noise cancellation, 40hr battery</p>
+          <p class="product-price">$249</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1583324113626-70df0f4deaab?auto=format&fit=crop&w=500&q=80" alt="Earbuds" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">EchoBuds 3</h3>
+          <p class="product-desc">True wireless, 24hr battery, fast charging</p>
+          <p class="product-price">$129</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wearables -->
+    <h2 class="section-title">Wearables</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd553?auto=format&fit=crop&w=500&q=80" alt="Smartwatch" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Chronos V Smartwatch</h3>
+          <p class="product-desc">Heart rate monitor, GPS, 7-day battery</p>
+          <p class="product-price">$179</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?auto=format&fit=crop&w=500&q=80" alt="Fitness Band" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">FitPro Band 6</h3>
+          <p class="product-desc">Step tracking, sleep monitor, 10-day battery</p>
+          <p class="product-price">$89</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gaming & Accessories -->
+    <h2 class="section-title">Gaming & Accessories</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=500&q=80" alt="Gaming PC" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Titan Gaming PC</h3>
+          <p class="product-desc">RTX 4080, 32GB RAM, 2TB NVMe SSD</p>
+          <p class="product-price">$2499</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1610895293341-2c06d9e48b2f?auto=format&fit=crop&w=500&q=80" alt="Console" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">RexBox Console</h3>
+          <p class="product-desc">Next-gen gaming, 1TB SSD, 4K HDR support</p>
+          <p class="product-price">$499</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1616004655124-5309e2130d2c?auto=format&fit=crop&w=500&q=80" alt="Gaming Headset" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">HyperWave Gaming Headset</h3>
+          <p class="product-desc">7.1 Surround, RGB lighting, noise-cancelling mic</p>
+          <p class="product-price">$159</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Rexon Electronics. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Hero Carousel Animation
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    function showSlide(n) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+    setInterval(nextSlide, 5000);
+  </script>
 </body>
 </html>
