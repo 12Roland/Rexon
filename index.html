@@ -4,107 +4,119 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Rexon :: Your Ultimate Tech Store</title>
-
-   <!-- External Stylesheets & Icons -->
+   <title>Rexon:: Your Ultimate Tech Store</title>
    <link rel="stylesheet" href="styles.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Roboto Font (Material Design standard) -->
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <!-- Material Design Components -->
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-   <!-- ================= PRELOADER ================= -->
-   <div id="preloader" aria-label="Loading content">
+   <!-- Preloader -->
+   <div id="preloader">
       <div class="spinner"></div>
    </div>
 
-   <!-- ================= WEBSITE CONTENT ================= -->
+   <!-- Website Content -->
    <div class="content">
-      <!-- ========== HEADER & NAVIGATION ========== -->
       <header class="header">
-         <nav class="nav container" role="navigation" aria-label="Main Navigation">
-            
-            <!-- Website Logo -->
-            <a href="index.html" class="nav__logo">REXON</a>
+         <nav class="nav container">
+            <a href="#" class="nav__logo">REXON</a>
 
-            <!-- Navigation Menu -->
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
-                  <li><a href="index.html" class="nav__link">Home</a></li>
-                  <li><a href="about.html" class="nav__link">About Us</a></li>
-                  <li><a href="product.html" class="nav__link">Products</a></li>
+                  <li>
+                     <a href="#" class="nav__link">Home</a>
+                  </li>
+
+                  <li>
+                     <a href="about.html" class="nav__link">About Us</a>
+                  </li>
+                  <li>
+                     <a href="product.html" class="nav__link">Products</a>
+                  </li>
                </ul>
 
-               <!-- Close button for mobile nav -->
-               <button class="nav__close" id="nav-close" aria-label="Close menu">
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
                   <i class="ri-close-large-line"></i>
-               </button>
+               </div>
             </div>
 
-            <!-- User Actions -->
             <div class="nav__actions">
-               <!-- Profile Dropdown -->
+               <!-- Dropdown -->
                <div class="dropdown" id="dropdown">
                   <div class="dropdown__profile">
                      <div class="dropdown__names">
                         <h3>Ritchie</h3>
                      </div>
+
                      <div class="dropdown__image">
-                        <img src="perfil.png" alt="User profile picture">
+                        <img src="perfil.png" alt="image">
                      </div>
                   </div>
 
-                  <!-- Dropdown Links -->
                   <div class="dropdown__list">
-                     <a href="#" class="dropdown__link"><i class="ri-user-line"></i><span>Profile</span></a>
-                     <a href="#" class="dropdown__link"><i class="ri-time-line"></i><span>Activity</span></a>
-                     <a href="#" class="dropdown__link"><i class="ri-bookmark-line"></i><span>Saved</span></a>
-                     <a href="#" class="dropdown__link"><i class="ri-settings-3-line"></i><span>Settings</span></a>
-                     <a href="#" class="dropdown__link"><i class="ri-logout-box-r-line"></i><span>Logout</span></a>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-user-line"></i>
+                        <span>Profile</span>
+                     </a>
+
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-time-line"></i>
+                        <span>Activity</span>
+                     </a>
+
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-bookmark-line"></i>
+                        <span>Saved</span>
+                     </a>
+
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-settings-3-line"></i>
+                        <span>Settings</span>
+                     </a>
+
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-logout-box-r-line"></i>
+                        <span>Logout</span>
+                     </a>
                   </div>
                </div>
 
-               <!-- Menu Toggle (for mobile) -->
-               <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+               <!-- Toggle button -->
+               <div class="nav__toggle" id="nav-toggle">
                   <i class="ri-menu-line"></i>
-               </button>
+               </div>
             </div>
          </nav>
       </header>
-
-      <!-- ========== HERO SECTION ========== -->
-      <main>
-         <section class="rexon-modern-hero" role="banner">
-            
-            <!-- Background Image -->
-            <img
-               src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&auto=format&fit=crop&w=2230&q=80"
-               alt="Modern tech gadgets" class="modern-hero-image">
-
-            <!-- Overlay for styling -->
-            <div class="tech-overlay" aria-hidden="true"></div>
-
-            <!-- Hero Content -->
-            <div class="modern-hero-content">
-               <h1 class="modern-hero-title">Elevate Your Tech Experience</h1>
-               <p class="modern-hero-subtitle">
-                  Discover the future with our collection of cutting-edge gadgets and smart devices
-               </p>
-               
-               <!-- CTA Button -->
-               <a href="product.html" class="button-link">
-                  <button class="modern-hero-button">
-                     <span>Explore Collection</span>
-                     <i class="material-icons" style="vertical-align: middle; margin-left:8px;">arrow_forward</i>
-                  </button>
-               </a>
-            </div>
-         </section>
-      </main>
    </div>
 
-   <!-- ================= JAVASCRIPT ================= -->
+   <section class="rexon-modern-hero">
+      <img
+         src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&auto=format&fit=crop&w=2230&q=80"
+         alt="Modern tech gadgets" class="modern-hero-image">
+
+      <div class="tech-overlay"></div>
+
+      <div class="modern-hero-content">
+         <h1 class="modern-hero-title">Elevate Your Tech Experience</h1>
+         <p class="modern-hero-subtitle">Discover the future with our collection of cutting-edge gadgets and smart
+            devices</p>
+         <a href="product.html" class="button-link">
+            <button class="modern-hero-button">
+               <span>Explore Collection</span>
+               <i class="material-icons" style="vertical-align: middle;margin-left:8px;">arrow_forward</i>
+            </button>
+         </a>
+      </div>
+   </section>
+
    <script src="script.js"></script>
 </body>
 
