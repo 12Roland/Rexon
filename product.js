@@ -1,3 +1,4 @@
+//Hero Carousel Animation
 let currentSlide = 0;
     const slides = document.querySelectorAll('.hero-slide');
     function showSlide(n) {
