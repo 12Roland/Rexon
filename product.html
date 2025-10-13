@@ -1,141 +1,11 @@
- <!-- product page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rexon - Premium Electronics</title>
-  <style>
-    :root {
-      --deep-blue: #08162b;
-      --electric-blue: #1a3a8f;
-      --teal-accent: #64ffda;
-      --card-blue: #112240;
-    }
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, var(--deep-blue), var(--electric-blue));
-      color: #e6f1ff;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 30px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    h1 {
-      font-size: 2.8rem;
-      background: linear-gradient(to right, var(--teal-accent), #3a7bd5);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 10px;
-    }
-    .subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-    /* Hero Carousel */
-    .hero {
-      height: 400px;
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-      margin-bottom: 60px;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    }
-    .hero-slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1.2s ease-in-out;
-      background-size: cover;
-      background-position: center;
-    }
-    .hero-slide.active {
-      opacity: 1;
-    }
-    .slide1 { background-image: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=80'); }
-    .slide2 { background-image: url('https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&w=1400&q=80'); }
-    .slide3 { background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80'); }
-
-    /* Product Grid */
-    .section-title {
-      text-align: center;
-      font-size: 2.2rem;
-      margin: 60px 0 40px;
-      color: var(--teal-accent);
-    }
-    .products-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-    .product-card {
-      background: var(--card-blue);
-      border-radius: 12px;
-      width: 280px;
-      overflow: hidden;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-    .product-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    }
-    .product-img {
-      height: 200px;
-      width: 100%;
-      object-fit: cover;
-      border-bottom: 2px solid rgba(100, 255, 218, 0.2);
-    }
-    .product-info {
-      padding: 20px;
-    }
-    .product-title {
-      font-size: 1.3rem;
-      margin: 0 0 10px;
-    }
-    .product-price {
-      color: var(--teal-accent);
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-    .product-desc {
-      opacity: 0.8;
-      font-size: 0.95rem;
-      margin-bottom: 15px;
-    }
-    .add-to-cart {
-      background: linear-gradient(to right, var(--teal-accent), #3a7bd5);
-      color: var(--deep-blue);
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      width: 100%;
-      transition: transform 0.3s;
-    }
-    .add-to-cart:hover {
-      transform: scale(1.03);
-    }
-    footer {
-      text-align: center;
-      margin-top: 80px;
-      padding-top: 30px;
-      border-top: 1px solid rgba(100, 255, 218, 0.2);
-    }
-  </style>
+  <link rel="stylesheet" href="product.css">
+  <script src="product.js"></script>
 </head>
 <body>
   <div class="container">
@@ -155,20 +25,38 @@
     <h2 class="section-title">Smartphones</h2>
     <div class="products-grid">
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=500&q=80" alt="Smartphone" class="product-img">
+        <img src="https://images.unsplash.com/photo-1738830251513-a7bfef4b53c6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1032" alt="Smartphone" class="product-img">
         <div class="product-info">
-          <h3 class="product-title">Quantum X Phone</h3>
-          <p class="product-desc">6.7" AMOLED, 256GB, 48MP triple camera</p>
-          <p class="product-price">$699</p>
+          <h3 class="product-title">Samsung S25</h3>
+          <p class="product-desc">6.9" OLED, up to 1 TB, 200 MP quad camera</p>
+          <p class="product-price">$1,419</p>
           <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=500&q=80" alt="Smartphone" class="product-img">
+        <img src="https://imgs.search.brave.com/-6zBw2jpOPgxSiXn0lzPWerAveGy7B7wFN9Gco0i27g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YXBwbGUuY29tL3Yv/aXBob25lL2hvbWUv/Y2YvaW1hZ2VzL292/ZXJ2aWV3L3NlbGVj/dC9pcGhvbmVfYWly/X19mMHQ1NmZlZjNv/ZXlfbGFyZ2UuanBn" alt="Smartphone" class="product-img">
         <div class="product-info">
-          <h3 class="product-title">Astra One</h3>
-          <p class="product-desc">6.9" OLED, 512GB, 64MP quad camera</p>
-          <p class="product-price">$899</p>
+          <h3 class="product-title">Iphone Air(256gb)</h3>
+          <p class="product-desc">6.5" OLED, up to 1 TB, 48MP single camera</p>
+          <p class="product-price">$999</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1727417084792-e8404868224e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870" alt="Smartphone" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Google pixel 10 pro(256gb)</h3>
+          <p class="product-desc">6.3" OLED, up to 1 TB, triple camera (50MP + 48MP + 48MP)</p>
+          <p class="product-price">$1,099</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://imgs.search.brave.com/yf3B52SpkR5y_9cci8U4v_EsP97Xwplw2ly2lg_n8DU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dW5nZWVrLnBoL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIyLzA2/L2luZmluaXhfbm90/ZV8xMl9nOTZfcmV2/aWV3X2ltYWdlNS5q/cGc" alt="Smartphone" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Infinix Note 12 Pro 5G</h3>
+          <p class="product-desc">6.7" AMOLED, 256 GB, 108MP camera</p>
+          <p class="product-price">$253</p>
           <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
@@ -178,29 +66,38 @@
     <h2 class="section-title">Laptops & Tablets</h2>
     <div class="products-grid">
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=500&q=80" alt="Laptop" class="product-img">
+        <img src="https://imgs.search.brave.com/FXovCIVPPA-vOyfDZMnlDNpPE2XFvU3uvtTg7auZnvg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS53aXJlZC5jb20v/cGhvdG9zLzY3ZDA3/ODQ4MDVmZDIwMjM0/ZmFjMjFmOC9tYXN0/ZXIvd18xNjAwLGNf/bGltaXQvTWFjQm9v/ay1BaXItTTQtMTUt/SW5jaC0yMDI1LShz/aWRlLWhhbGYtb3Bl/bi1zZW1pLWZvbGRl/ZCktUmV2aWV3ZXIt/UGhvdG8tU09VUkNF/LUx1a2UtTGFyc2Vu/LmpwZw" alt="Laptop" class="product-img">
         <div class="product-info">
-          <h3 class="product-title">NovaBook Pro</h3>
-          <p class="product-desc">14" 4K display, 16GB RAM, 1TB SSD</p>
-          <p class="product-price">$1299</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=500&q=80" alt="Tablet" class="product-img">
-        <div class="product-info">
-          <h3 class="product-title">Galaxy Tab S3</h3>
-          <p class="product-desc">10.5" OLED, 128GB, S-Pen included</p>
-          <p class="product-price">$549</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80" alt="Laptop" class="product-img">
-        <div class="product-info">
-          <h3 class="product-title">ZenBook Air</h3>
-          <p class="product-desc">13.3" Retina display, 8GB RAM, 512GB SSD</p>
+          <h3 class="product-title">MacBook Air (M4) base 13-inch</h3>
+          <p class="product-desc">13.6″ Retina, 256 GB, 16 GB RAM</p>
           <p class="product-price">$999</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://imgs.search.brave.com/nuQHcxluc8HOlUJOGYuiBtOkINwJi5b7hZ8I66Jou3A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L2Vu/YjVwQnBRd25KamhG/OHlYYlJhNkguanBn" alt="Tablet" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Galaxy Book4 Ultra</h3>
+          <p class="product-desc">16.0″ AMOLED touch, 1 TB, 16 GB RAM, RTX 4050</p>
+          <p class="product-price">$1,799</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://imgs.search.brave.com/9KrNnIyeZlSaabSVGO8D6xqohiq-pIODwNsdCKEglNo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFnQzdmclJKeUwu/anBn" alt="Laptop" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">iPad Pro (M4) 11-inch (Wi-Fi)</h3>
+          <p class="product-desc">11″ OLED/Retina, 256 GB, M4 chip</p>
+          <p class="product-price">$1,000</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://imgs.search.brave.com/Wo42vxNTx5MS8bEHABygKru3NmmzEhuJpMXWBl_E3Yw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaG9w/LnNhbXN1bmcuY29t/L2xhdGluL2NhYy9w/dWIvbWVkaWEvY2F0/YWxvZy9wcm9kdWN0/L2NhY2hlL2E2OTE3/MGI0YTRmMDY2NmE1/MjQ3M2MyMjI0YmE5/MjIwL2cvYS9nYWxh/eHktdGFiLXMxMS11/bHRyYV9wcm9kdWN0/LWltYWdlX2NvbWJv/LTEucG5n" alt="Tablet" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Galaxy Tab S11 (Wi-Fi)</h3>
+          <p class="product-desc">11″ AMOLED, 128 GB, 12 GB RAM</p>
+          <p class="product-price">$799</p>
           <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
@@ -288,20 +185,5 @@
       <p>© 2025 Rexon Electronics. All rights reserved.</p>
     </footer>
   </div>
-
-  <script>
-    // Hero Carousel Animation
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.hero-slide');
-    function showSlide(n) {
-      slides.forEach(slide => slide.classList.remove('active'));
-      currentSlide = (n + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
-    function nextSlide() {
-      showSlide(currentSlide + 1);
-    }
-    setInterval(nextSlide, 5000);
-  </script>
 </body>
 </html>
