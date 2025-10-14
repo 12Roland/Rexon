@@ -1,4 +1,5 @@
 // Wait for window load
+
 window.addEventListener('load', function() {
     // Set minimum display time to 5 seconds (5000 milliseconds)
     const minimumDisplayTime = 2560;
